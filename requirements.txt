@@ -1,2 +1,5 @@
 streamlit==1.40.1
-nltk==3.9.1
+scikit-learn
+pandas
+numpy
+nltk
