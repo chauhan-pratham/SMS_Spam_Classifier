@@ -5,9 +5,16 @@ from nltk.corpus import stopwords
 import nltk
 from nltk.stem.porter import PorterStemmer
 
-# Download the punkt tokenizer and stopwords
-nltk.download('punkt', quiet=True)
-nltk.download('stopwords', quiet=True)
+# Download the punkt tokenizer and stopwords if not already downloaded
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt', quiet=True)
+
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords', quiet=True)
 
 ps = PorterStemmer()
 
