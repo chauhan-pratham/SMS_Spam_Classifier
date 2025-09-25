@@ -13,7 +13,7 @@ except LookupError:
 try:
     nltk.word_tokenize("test")
 except LookupError:
-    nltk.download('punkt')
+    nltk.download('punkt_tab')
     
 ps = PorterStemmer()
 
@@ -86,4 +86,5 @@ st.sidebar.markdown(
     """
 
 )
+
 
