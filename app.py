@@ -5,16 +5,6 @@ from nltk.corpus import stopwords
 import nltk
 from nltk.stem.porter import PorterStemmer
 
-# Download NLTK data (only needs to be run once)
-try:
-    stopwords.words('english')
-except LookupError:
-    nltk.download('stopwords')
-try:
-    nltk.word_tokenize("test")
-except LookupError:
-    nltk.download('punkt')
-
 ps = PorterStemmer()
 
 def transform_text(text):
@@ -84,4 +74,5 @@ st.sidebar.markdown(
     2. **Vectorization:** Transforms the preprocessed text into numerical features using TF-IDF.
     3. **Prediction:** The trained Multinomial Naive Bayes model predicts whether the message is spam or ham.
     """
+
 )
